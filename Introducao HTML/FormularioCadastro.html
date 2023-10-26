@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+</head>
+<body>
+    <form name="cadastro" onsubmit="alert('Formulário Enviado');" autocomplete="on" method="post" action="https://meusite.com.br/cadastro"> 
+        Nome: <input type="text" name="Nome" /><br>
+        Idade: <input type="number" name="Idade" /><br>
+        Senha: <input type="password" name="Senha" /><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+
+<!--// Aqui estamos fazendo um arquivo Formulário, nele começamos com a tag html:5 para fazer
+       a estrutura do arquivo.
+    // Em head title colocamos o Titulo do arquivo a ser mostrado na barra URL.
+    // Na tag body colocamos a tag form e demos os parâmetros name="cadastro" como nome, 
+       onsubmit="alert('Formulário Enviado')" para Mostrar uma msg de alerta, autocomplete="on"
+       para não precisar as informações de name e idade na tela, method="post" para mostrar ou não as informações
+       na URL e action="URL" para esta mandando para proxima página.
+    // Nome: input e o tipo de dado a ser inserido na caixa do formulário
+    // Idade: input e o tipo de dado a ser inserido na caixa do formulário
+    // Senha: input e o tipo de dado a ser inserido na caixa do formulário
+    // A tag button type="submit" serve para vc está enviando o arquivo.
+    -->
