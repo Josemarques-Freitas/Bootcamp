@@ -5,6 +5,24 @@ body {
     background-color: black;
 }
 
+h1 {
+    overflow: hidden;
+    border-right: 0.15em solid rgba(49, 168, 221, .0);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation-duration: 4s, 0.75s;
+    animation-timing-function: steps(30), step-end;
+    animation-delay: 0s, 0s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, normal;
+    animation-fill-mode: none, none;
+    animation-play-state: running, running;
+    animation-name: typing, blink-caret;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
 
 h2 {
     font-size: 2rem;
@@ -23,6 +41,16 @@ p {
 
 section {
     margin: 100px auto;
+}
+
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url(/assets/images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding-top: 60px;
+    border-bottom: 1px solid #33A8DB80;
 }
 
 
@@ -49,9 +77,27 @@ section {
     margin: 16px 0 24px;
 }
 
+.banner .banner-content button {
+    color: #31A8DD;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 16px 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    border-image: linear-gradient(rgb(59, 161, 205), rgb(21, 114, 183));
+    border-image-source: linear-gradient(rgb(59, 161, 205), rgb(21, 114, 183));
+    border-image-slice: 100%;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 10;
+    border-radius: 30px;
+}
+
 
 .banner .logo {
-    background-color: rgba(0, 0, 0, 2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 260px;
     width: 260px;
     margin: auto;
@@ -73,7 +119,7 @@ section {
     color: #31a8dd;
     font-size: 1rem;
     font-weight: bold;
-    padding: 16px 31px;
+    padding: 16px 32px;
     text-transform: uppercase;
     letter-spacing: 4px;
     background-color: transparent;
@@ -134,7 +180,7 @@ section {
 
 
 
-#profissional-challegens {
+#profissional-challenges {
     text-align: center;
     width: 800px;
 }
