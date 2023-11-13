@@ -7,32 +7,10 @@ body {
 
 h1 {
     overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
     border-right: 0.15em solid rgba(49, 168, 221, .0);
-    border-right-width: 0.15em;
-    border-right-style: solid;
-    border-right-color: rgba(49, 168, 221, .0);
     white-space: nowrap;
-    white-space-collapse: collapse;
-    text-wrap: nowrap;
     margin: 0 auto;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
     letter-spacing: .15em;
-    animation-duration: 4s, 0.75s;
-    animation-timing-function: steps(30), step-end;
-    animation-delay: 0s, 0s;
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, normal;
-    animation-fill-mode: none, none;
-    animation-play-state: running, running;
-    animation-name: typing, blink-caret;
-    animation-timeline: auto;
-    animation-range-start: normal;
-    animation-range-end: normal;
     animation: typing 4s steps(30, end), blinl-caret .75s step-end infinite;
 }
 
@@ -76,7 +54,7 @@ section {
 
 
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url(/assets/images/banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url(../images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
@@ -100,16 +78,6 @@ section {
     text-transform: uppercase;
     color: transparent;
     background: -webkit-linear-gradient(#33A8DB, #1472B7);
-    background-image: -webkit-linear-gradient(top, rgb(51, 168, 219), rgb(20, 114, 183));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -118,25 +86,6 @@ section {
     font-size: 1.25rem;
     margin: 16px 0 24px;
 }
-
-.banner .banner-content button {
-    color: #31A8DD;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 16px 32px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    background-color: transparent;
-    border-image: linear-gradient(rgb(59, 161, 205), rgb(21, 114, 183));
-    border-image-source: linear-gradient(rgb(59, 161, 205), rgb(21, 114, 183));
-    border-image-slice: 100%;
-    border-image-width: 1;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    border-image-slice: 10;
-    border-radius: 30px;
-}
-
 
 .banner .logo {
     background-color: rgba(0, 0, 0, 0.2);
@@ -148,7 +97,6 @@ section {
     margin-bottom: 16px;
 }
 
-
 .banner .logo img {
     margin: auto;
     width: 100%;
@@ -156,18 +104,22 @@ section {
     object-fit: contain;
 }
 
-
 .banner .banner-content button {
-    color: #31a8dd;
+    color: #31A8DD;
     font-size: 1rem;
     font-weight: bold;
     padding: 16px 32px;
     text-transform: uppercase;
     letter-spacing: 4px;
     background-color: transparent;
-    border-image: linear-gradient(#3ba1cd, #1572b7);
+    border-image: linear-gradient(#3BA1CD, #1572B7);
     border-image-slice: 10;
     border-radius: 30px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
 }
 
 
