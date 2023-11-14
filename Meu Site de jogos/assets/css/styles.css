@@ -1,0 +1,71 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size:small;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 20%), rgba(55, 13, 13, 0)), url(../imagens/share_image_s1074944.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    text-align:justify;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size:small;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    width: 370px;
+    height: 270px;
+    background-attachment: fixed;
+    background: rgba(255, 255, 255, 0.983);
+    border: 2.7px solid rgb(215, 215, 240);
+    overflow: auto;
+    border-radius: 4px;
+    
+}
+
+.quadro {
+    background: #ffffff;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin: -1px;
+}
+
+.div-botton a {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 390;
+    font-size:small;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: black;
+    text-decoration: none;
+    background: #d3c4c4aa;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.div-botton {
+    margin-top: 1px;
+    display: flex;
+    justify-content: flex-end;
+    width: 370px;
+}
+
+.div-botton a:hover {
+background: #CCC;
+}
