@@ -4,13 +4,16 @@ const state = {
         enemy: document.querySelector(".enemy"),
         timeLeft: document.querySelector("#time-left"),
         score: document.querySelector("#score"),
+        levelPlayer: document.querySelector("#level"),
     },
     values: {
-        
         gameVelocity: 1000,
         hitPosition: 0,
         result: 0,
         currentTime: 20,
+        level: 1,
+        startTime: null,
+        hitMin: 13,
     },
 
     actions: {
@@ -19,6 +22,16 @@ const state = {
     },
 };
 
+function countDown(){
+  state.values.currentTime --;
+  state.view.timeLeft.textContent = state.values.currentTime
+  
+  if (state.values.currentTime < 0) {
+      clearInterval(state.actions.countDownTimeId)
+      clearInterval(state.actions.timeId)
+      youScore();
+  }
+}
 
 function randomSquare() {
     state.view.squares.forEach((square) => {
@@ -38,23 +51,30 @@ function playSound(audioName) {
 }
 
 function youScore() {
-    if (state.values.result <= 16) {
-        alert("Gamer Over! O seu reusltado foi: " + state.values.result);
-    } else {
-        alert("Parabéns, você passou de nivel! Seu resultado foi: " + state.values.result);
-    }
-    
-}
+  if (state.values.result >= state.values.hitMin) {
+      state.values.level++;
+      state.view.levelPlayer.textContent = state.values.level;
+      state.values.hitMin += 13;
+  } else {
+    alert("Geme Over! Você não atingiu a meta de scores.");
+    clearInterval(state.actions.countDownTimeId);
+    clearInterval(state.actions.timeId);
+    return;
+  }
 
-function countDown(){
-state.values.currentTime --;
-state.view.timeLeft.textContent = state.values.currentTime
-
-if (state.values.currentTime <= 0) {
-    clearInterval(state.actions.countDownTimeId)
-    clearInterval(state.actions.timeId)
-    youScore();
-}
+  if (state.values.level <= 10) {
+      alert(`Parabéns, você passou de nivel ${state.values.level}! Clique em Ok para ir para próxima fase.`);
+      state.values.currentTime = 20; // Reset the timer for each level
+      state.view.timeLeft.textContent = state.values.currentTime;
+      state.view.levelPlayer.textContent = state.values.level;
+      state.values.gameVelocity += 500;
+      
+      // Restart the game with new intervals
+      clearInterval(state.actions.countDownTimeId);
+      clearInterval(state.actions.timeId);
+      state.actions.timeId = setInterval(randomSquare, state.values.gameVelocity);
+      state.actions.countDownTimeId = setInterval(countDown, 1000);
+  }
 }
 
 
@@ -66,16 +86,15 @@ function addListenerHitBox() {
           state.view.score.textContent = state.values.result;
           state.values.hitPosition = null;
           playSound("hit");
-            }
             
-        })
+        }    
+      });
     });
 }
 
 
 function init() {
     addListenerHitBox();
-    
 }
 
 init();
