@@ -1,52 +1,72 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../imagem/wall.png");
-}
-
-.menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 90px;
-    width: 100%;
-    background-color: #080000;
-    color: #ffffff;
-    border-bottom: 5px solid #ffd700;
-}
-
-
-.menu-time h2:nth-child(2),
-.menu-score h2:nth-child(2),
-.menu-level h2:nth-child(2)  {
-    margin-top: 10px;
-    
-}
-
-.menu-lives {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@import url("./global.css");
 
 
 
-.panel {
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: auto;
+  gap: .938rem;
+  padding: 1.688rem 1.688rem;
 }
 
 .square {
-    height: 150px;
-    width: 150px;
-    border: 1px solid #000000;
-    background-color:#2ef1b0
+  width: 9.5rem;
+  height: 9.875rem;
+  background-image: url("../imagem/cardBoxWindow.png");
+  background-size: cover;
+  z-index: 1;
 }
 
 .enemy {
-    background-image: url("../imagem/ralph.png");
-    background-size: cover;
+  background-image: url("../imagem/wreck.png");
+  background-size: contain;
+  z-index: 2;
+
+}
+
+#infor {
+  display: flex;
+  height: 5.5rem;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin: auto;
+}
+
+#infor h1 {
+  font-size: x-large;
+  color: var(--secondary-color );
+}
+#infor h2 {
+  font-size: small;
+}
+#infor h2:nth-child(2) {
+  font-size: medium;
+  margin-top: .5rem;
+  color: var(--secondary-color);
+}
+#infor .level {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#infor .level img {
+  width: 3.063rem;
+  height: 3.063rem;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  font-size: xx-small;
+  color: var(--color-logo);
+  margin-bottom: 15px;
 }

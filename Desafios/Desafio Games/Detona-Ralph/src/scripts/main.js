@@ -7,13 +7,13 @@ const state = {
         levelPlayer: document.querySelector("#level"),
     },
     values: {
-        gameVelocity: 1000,
+        gameVelocity: 2000,
         hitPosition: 0,
         result: 0,
         currentTime: 20,
         level: 1,
         startTime: null,
-        hitMin: 13,
+        hitMin: 15,
     },
 
     actions: {
@@ -54,7 +54,7 @@ function youScore() {
   if (state.values.result >= state.values.hitMin) {
       state.values.level++;
       state.view.levelPlayer.textContent = state.values.level;
-      state.values.hitMin += 13;
+      state.values.hitMin += 15;
   } else {
     alert("Geme Over! Você não atingiu a meta de scores.");
     clearInterval(state.actions.countDownTimeId);
